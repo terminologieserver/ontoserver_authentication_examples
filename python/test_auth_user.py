@@ -37,6 +37,7 @@ data = {
 request = requests.post(token_endpoint, data=data)
 response = request.json()
 token = response.get('access_token')
+logging.info(f"Token: {token}")
 logging.info("-"*60)
 logging.info("*** Inloggen ***")
 logging.info(f"Retrieving \t{token_endpoint}")
